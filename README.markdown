@@ -129,7 +129,7 @@ Is possible to have a portuguese DSL with dates, and the language itself.
 	      end
 
 	      faturamento do
-	    	nota_fiscal(1000).na_data('25/07/2011').imposto(6.por_cento)
+	    	nota_fiscal(1000).na_data('25/07/2011').imposto(6.por_cento).na_data('17/08/2011') # Will have a revenue of 1000 in 25 July 2011 BUT will have a tax cost of 6 per cent in 17 august 2011
 	      end
 	    end
 
