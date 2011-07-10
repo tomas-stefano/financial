@@ -61,7 +61,7 @@ Print information in the terminal
 And to print the information of bank account:
 	
     print_account :my_bank_account do
-      period('04/30/2011').to('07/16/2011')
+      from('04/30/2011').to('07/16/2011')
     end
 
 Work with more than one bank account
@@ -96,7 +96,7 @@ Print information of all accounts
 Just pass **:all** option:
 
     print_account :all do
-      period('04/30/2011').to('07/16/2011')
+      from('04/30/2011').to('07/16/2011')
     end
 
 More Examples
@@ -134,15 +134,15 @@ Is possible to have a portuguese DSL with dates, and the language itself.
 	    end
 
 		# imprima_conta :minha_conta do
-		#  periodo('20/03/2011').até('16/07/2011')
+		#  de('20/03/2011').até('16/07/2011')
 		# end
 
 		imprima_conta :todos do
-		  periodo('20/03/2011').até('16/07/2011')
+		  de('20/03/2011').até('16/07/2011')
 		end
 
 	   # imprima_conta :todos do
-	   #   periodo('20/06/2011').até('16/07/2011')
+	   #   de('20/06/2011').até('16/07/2011')
 	   # end
 		
 		
