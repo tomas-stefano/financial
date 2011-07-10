@@ -1,0 +1,34 @@
+names:
+  parcel: Parcel
+  balance: Balance
+  deposit: Deposit
+  received_deposit: Deposit from
+
+methods:
+
+date:
+    format: "%m/%d/%Y"
+    month_names:
+        - !ruby/symbol january
+        - !ruby/symbol february
+        - !ruby/symbol march
+        - !ruby/symbol april
+        - !ruby/symbol may
+        - !ruby/symbol june
+        - !ruby/symbol july
+        - !ruby/symbol august
+        - !ruby/symbol september
+        - !ruby/symbol october
+        - !ruby/symbol november
+        - !ruby/symbol december
+
+table:
+    headings:
+      - Date
+      - Name
+      - Value($)
+      - Total
+    initial_balance: Initial Balance
+    final_balance: Final Balance
+
+coin: $

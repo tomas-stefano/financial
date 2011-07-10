@@ -1,0 +1,67 @@
+names:
+  parcel: Parcela
+  balance: Saldo
+  deposit: Deposito
+  received_deposit: Deposito recebido
+
+methods:
+  Account:
+      custos: costs
+      faturamento: revenues
+      depositos: deposits
+
+  Cost:
+      na_data: in_date
+
+  Costs:
+      parcelas: parcels
+
+  Deposit:
+      na_conta: in_account
+
+  Deposits:
+      deposite: deposit
+
+  DSL:
+      conta: account
+      imprima_conta: print_account
+
+  Parcels:
+      de: of
+      todo_dia: every_day
+      comecando_no_mes_de: beginning
+
+  PrintTable:
+      de: from
+      até: to
+
+  Revenue:
+      imposto: tax
+      na_data: in_date
+
+date:
+    format: "%d/%m/%Y"
+    month_names:
+        - !ruby/symbol janeiro
+        - !ruby/symbol fevereiro
+        - !ruby/symbol março
+        - !ruby/symbol abril
+        - !ruby/symbol maio
+        - !ruby/symbol junho
+        - !ruby/symbol julho
+        - !ruby/symbol agosto
+        - !ruby/symbol setembro
+        - !ruby/symbol outubro
+        - !ruby/symbol novembro
+        - !ruby/symbol dezembro
+
+table:
+    headings:
+      - Data
+      - Nome
+      - Valor(R$)
+      - Total
+    initial_balance: Saldo Inicial
+    final_balance: Saldo Final
+
+coin: R$

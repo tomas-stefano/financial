@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+#
+# InfinityTest configuration setup
+# You can see more information in here:
+# https://github.com/tomas-stefano/infinity_test/wiki/Customize-Infinity-Test
+#
+infinity_test do
+  # notifications :growl
+  # notifications :lib_notify
+  
+  #
+  use({:test_framework=>:rspec, :verbose=>true})
+  
+  
+  ignore :folders => %w(), :files => %w()
+end
