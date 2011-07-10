@@ -147,8 +147,10 @@ Is possible to have a portuguese DSL with dates, and the language itself.
 		
 		
 
-OUTPUT
-------
+OUTPUT EXAMPLE
+--------------
+
+This is an output example from [two_accounts.rb](https://github.com/tomas-stefano/financial/blob/master/examples/two_accounts.rb)
 
 <div style="padding:2px; border:1px solid silver; float:right; margin:0 0 1em 2em; background:white">
   <img src="https://github.com/tomas-stefano/financial/raw/master/example.png" alt="Output Example" />

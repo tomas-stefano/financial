@@ -7,10 +7,10 @@
 infinity_test do
   # notifications :growl
   # notifications :lib_notify
-  
+
   #
   use({:test_framework=>:rspec, :verbose=>true})
-  
-  
+
+
   ignore :folders => %w(), :files => %w()
 end
