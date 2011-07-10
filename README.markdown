@@ -60,7 +60,7 @@ Print information in the terminal
 
 And to print the information of bank account:
 	
-    print_financial_account :my_bank_account do
+    print_account :my_bank_account do
       period('04/30/2011').to('07/16/2011')
     end
 
@@ -95,7 +95,7 @@ Print information of all accounts
 
 Just pass **:all** option:
 
-    print_financial_account :all do
+    print_account :all do
       period('04/30/2011').to('07/16/2011')
     end
 
