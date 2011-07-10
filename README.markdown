@@ -133,15 +133,15 @@ Is possible to have a portuguese DSL with dates, and the language itself.
 	      end
 	    end
 
-		# imprima_extrato_bancario :minha_conta do
+		# imprima_conta :minha_conta do
 		#  periodo(data_corrente).até('16/07/2011')
 		# end
 
-		imprima_extrato_bancario :todos do
+		imprima_conta :todos do
 		  periodo(data_atual).até('16/07/2011')
 		end
 
-	   # imprima_extrato_bancario :todos do
+	   # imprima_conta :todos do
 	   #   periodo('20/06/2011').até('16/07/2011')
 	   # end
 		
