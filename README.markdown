@@ -155,3 +155,9 @@ This is an output example from [two_accounts.rb](https://github.com/tomas-stefan
 <div style="padding:2px; border:1px solid silver; float:right; margin:0 0 1em 2em; background:white">
   <img src="https://github.com/tomas-stefano/financial/raw/master/example.png" alt="Output Example" />
 </div>
+
+
+FUTURE
+======
+
+Create a pdf file with the period as a name.
