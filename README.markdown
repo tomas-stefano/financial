@@ -21,6 +21,8 @@ Install
 Usage
 -----
 
+```ruby
+    
     require 'financial'
 
     include Financial::DSL
@@ -45,6 +47,7 @@ Usage
 	  end
 
     end
+```
 
 **Obs**: 
 
@@ -59,14 +62,17 @@ Print information in the terminal
 ---------------------------------
 
 And to print the information of bank account:
-	
+
+```ruby
     print_account :my_bank_account do
       from('04/30/2011').to('07/16/2011')
     end
+```
 
 Work with more than one bank account
 ------------------------------------
 
+```ruby
 	account :other_bank do
 	  total 30
 
@@ -78,6 +84,7 @@ Work with more than one bank account
 	    some_cost(500).in_date('07/20/2011')
 	  end
 	end
+```
 
 **OBS.:**
 
@@ -111,6 +118,7 @@ Is possible to have a portuguese DSL with dates, and the language itself.
 
 	Then:
 
+```ruby
 	    require 'financial'
 
 		Financial.locale = :pt
@@ -144,8 +152,7 @@ Is possible to have a portuguese DSL with dates, and the language itself.
 	   # imprima_conta :todos do
 	   #   de('20/06/2011').até('16/07/2011')
 	   # end
-		
-		
+```
 
 OUTPUT EXAMPLE
 --------------
