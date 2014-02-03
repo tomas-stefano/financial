@@ -93,7 +93,7 @@ Work with more than one bank account
 
 If you just like to get/find the object of bank account just do:
 
-    other_bank_account = Financial::Account.where :account => :other_bank
+    other_bank_account = Financial::Account.where account: :other_bank
 
 :)
 
@@ -102,9 +102,11 @@ Print information of all accounts
 
 Just pass **:all** option:
 
+```ruby
     print_account :all do
       from('04/30/2011').to('07/16/2011')
     end
+```
 
 More Examples
 -------------
