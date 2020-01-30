@@ -22,37 +22,35 @@ Usage
 -----
 
 ```ruby
-    
-    require 'financial'
+require 'financial'
 
-    include Financial::DSL
-	include Financial::PerCent
+include Financial::DSL
+include Financial::PerCent
 
-    account :my_bank_account do
-      total 10 # current total
+account :my_bank_account do
+  total 10 # current total
 
-      costs do
-        a_cost(400).in_date('7/30/2011')
-        other_cost(500).in_date('7/31/2011')
-        other_other_cost(100) # will use current date if dont pass a date option
-        credit_card(1000)
-      end
+  costs do
+    a_cost(400).in_date('7/30/2011')
+    other_cost(500).in_date('7/31/2011')
+    other_other_cost(100) # will use current date if dont pass a date option
+    credit_card(1000)
+  end
 
-	  revenues do   # or  billing do
-	    a_revenue(300).tax(200).in_date('09/20/2011')  # the profit here will be 100 and the date of the a_revenue will be today and the tax date will be '09/20/2011'
-	    other_revenue(500).in_date('07/15/2011').tax(6.per_cent).in_date('08/20/2011')
-	    bill(2000).tax(12.per_cent)
-	    developing_the_site_y 1000
-	    developing_the_other_site 900
-	  end
-
-    end
+  revenues do   # or  billing do
+    a_revenue(300).tax(200).in_date('09/20/2011')  # the profit here will be 100 and the date of the a_revenue will be today and the tax date will be '09/20/2011'
+    other_revenue(500).in_date('07/15/2011').tax(6.per_cent).in_date('08/20/2011')
+    bill(2000).tax(12.per_cent)
+    developing_the_site_y 1000
+    developing_the_other_site 900
+  end
+end
 ```
 
 **Obs**: 
 
   * **You can pass ANY NAME in the #revenues block and #costs block**
- 	because is used **method_missing** feature.
+	because is used **method_missing** feature.
   * The **tax** method is a **cost** that will be a **multiplication**, 
 	and the profit will be calculate like the following: 500 * 0.06 == Profit! :)
   * If you wanna **subtract** the revenue use the **tax(:decreases => 200)** option, 
@@ -64,26 +62,26 @@ Print information in the terminal
 And to print the information of bank account:
 
 ```ruby
-    print_account :my_bank_account do
-      from('04/30/2011').to('07/16/2011')
-    end
+print_account :my_bank_account do
+  from('04/30/2011').to('07/16/2011')
+end
 ```
 
 Work with more than one bank account
 ------------------------------------
 
 ```ruby
-	account :other_bank do
-	  total 30
+account :other_bank do
+  total 30
 
-	  deposits do
-	    deposit(500).in_account(:my_bank_account) # The bank account above!
-	  end
-	  
-	  costs do
-	    some_cost(500).in_date('07/20/2011')
-	  end
-	end
+  deposits do
+    deposit(500).in_account(:my_bank_account) # The bank account above!
+  end
+  
+  costs do
+    some_cost(500).in_date('07/20/2011')
+  end
+end
 ```
 
 **OBS.:**
@@ -103,9 +101,9 @@ Print information of all accounts
 Just pass **:all** option:
 
 ```ruby
-    print_account :all do
-      from('04/30/2011').to('07/16/2011')
-    end
+print_account :all do
+  from('04/30/2011').to('07/16/2011')
+end
 ```
 
 More Examples
@@ -118,42 +116,42 @@ Portuguese
 
 Is possible to have a portuguese DSL with dates, and the language itself.
 
-	Then:
+Then:
 
 ```ruby
-	    require 'financial'
+require 'financial'
 
-		Financial.locale = :pt
-		include Financial::DSL
-		include Financial::PerCent
+Financial.locale = :pt
+include Financial::DSL
+include Financial::PerCent
 
-	    conta :minha_conta do
-	      total 215.0
+conta :minha_conta do
+  total 215.0
 
-	      depositos do
-	        deposite(500).na_conta(:outra_conta).na_data('20/07/2011') # will add 500 in outra_conta in the 20 July 2011
-	      end
+  depositos do
+    deposite(500).na_conta(:outra_conta).na_data('20/07/2011') # will add 500 in outra_conta in the 20 July 2011
+  end
 
-	      despesas do
-	        contador 100
-	      end
+  despesas do
+    contador 100
+  end
 
-	      faturamento do
-	    	nota_fiscal(1000).na_data('25/07/2011').imposto(6.por_cento).na_data('17/08/2011') # Will have a revenue of 1000 in 25 July 2011 BUT will have a tax cost of 6 per cent in 17 august 2011
-	      end
-	    end
+  faturamento do
+    nota_fiscal(1000).na_data('25/07/2011').imposto(6.por_cento).na_data('17/08/2011') # Will have a revenue of 1000 in 25 July 2011 BUT will have a tax cost of 6 per cent in 17 august 2011
+  end
+end
 
-		# imprima_conta :minha_conta do
-		#  de('20/03/2011').até('16/07/2011')
-		# end
+# imprima_conta :minha_conta do
+#  de('20/03/2011').até('16/07/2011')
+# end
 
-		imprima_conta :todos do
-		  de('20/03/2011').até('16/07/2011')
-		end
+imprima_conta :todos do
+  de('20/03/2011').até('16/07/2011')
+end
 
-	   # imprima_conta :todos do
-	   #   de('20/06/2011').até('16/07/2011')
-	   # end
+# imprima_conta :todos do
+#   de('20/06/2011').até('16/07/2011')
+# end
 ```
 
 OUTPUT EXAMPLE
