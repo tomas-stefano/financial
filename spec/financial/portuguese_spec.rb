@@ -57,7 +57,7 @@ describe 'account :banco_com_dinheiro' do
     it 'all costs should be instance of Costs' do
       banco_com_dinheiro.costs.all? { |cost|
         cost.instance_of?(Financial::Cost)
-      }.should be_true
+      }.should be true
     end
   end
 

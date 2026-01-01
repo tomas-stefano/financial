@@ -155,15 +155,15 @@ module Financial
         before { reserved_bank.costs { parcels(2).of(400) } }
 
         it 'should split all the parcels in cost' do
-          reserved_bank.costs.all? { |cost| cost.class == Cost }.should be_true
+          reserved_bank.costs.all? { |cost| cost.class == Cost }.should be true
         end
 
         it 'should keep the value of the parcel and setting in the cost' do
-          reserved_bank.costs.all? { |cost| cost.value.equal?(400) }.should be_true
+          reserved_bank.costs.all? { |cost| cost.value.equal?(400) }.should be true
         end
 
         it 'should keep the dates of the parcel and setting in the cost' do
-          reserved_bank.costs.all? { |cost| cost.date.is_a?(Date) }.should be_true
+          reserved_bank.costs.all? { |cost| cost.date.is_a?(Date) }.should be true
         end
       end
 

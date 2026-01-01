@@ -143,7 +143,7 @@ module Financial
       end
 
       it 'should converting to cost with the correct value' do
-        costs.all? {|cost| cost.value == 200 }.should be_true
+        costs.all? {|cost| cost.value == 200 }.should be true
       end
 
       context "with many dates" do

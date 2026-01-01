@@ -1,4 +1,5 @@
 require 'rspec'
+require 'rspec/collection_matchers'
 require 'financial'
 
 # require 'simplecov'
@@ -14,7 +15,7 @@ RSpec.configure do |config|
   end
 
   def stub_date(day, month, year)
-    Date.stub!(:today).and_return(Date.civil(year, month, day))
+    Date.stub(:today).and_return(Date.civil(year, month, day))
   end
 
   def ensure_locale(locale_name)

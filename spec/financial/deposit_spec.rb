@@ -71,7 +71,7 @@ module Financial
         deposits = city_bank.deposits do
           deposit(600).in_account(:state_bank)
         end
-        deposits.first.is_a_received_deposit?(state_bank).should be_true
+        deposits.first.is_a_received_deposit?(state_bank).should be true
       end
     end
   end
